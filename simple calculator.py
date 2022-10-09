@@ -1,42 +1,42 @@
-def calculadora() :
+def calculator() :
    x = int(input(">>>  "))
    if type(x) is str:
-      print("inserte solo numeros")
-      calculadora()
+      print("only numbers = ")
+      calculator()
    elif type(x) is not str:
-      signo = (input("+-×÷:"))
+      operator = (input("+-×÷:"))
       y = int(input(">>>  "))
       if type(y) is str:
-        print("inserte solo numeros")
-        calculadora()
+        print("only numbers = ")
+        calculator()
       elif type(y) is not str:
-        if signo == "+" or signo == "sumar" or signo == "mas":
-          resultado = x + y
-          print("=" , resultado)
-          nuevo()
-        elif signo == "-" or signo == "restar" or signo == "menos":
-          resultado = x - y
-          print("=" , resultado)
-          nuevo()
-        elif signo == "÷" or signo == "dividido" or signo == "dividir":
-          resultado = x / y
-          print("=" , resultado)
-          nuevo()
-        elif signo == "×" or signo == "por" or signo == "multiplicar":
-          resultado = x * y
-          print("=" , resultado)
-          nuevo()
+        if operator == "+":
+          result = x + y
+          print("=" , result)
+          new()
+        elif operator == "-":
+          result = x - y
+          print("=" , result)
+          new()
+        elif operator == "÷":
+          result = x / y
+          print("=" , result)
+          new()
+        elif operator == "×":
+          result = x * y
+          print("=" , result)
+          new()
         else:
-          print("comando invalido, inserte simbolo de       operador intentelo de nuevo")
-          calculadora()
-def nuevo(): 
-   nuevo = input("desea realizar otra operacion? y/n: ").lower()
-   if nuevo == "y" or nuevo == "yes":
-      calculadora()
-   elif nuevo == "n" or nuevo == "no":
-      print("hasta luego")
+          print("invalid operator only: +-×÷")
+          calculator()
+def new(): 
+   new = input("make another one y/n: ").lower()
+   if new == "y" or new == "yes":
+      calculator()
+   elif new == "n" or new == "no":
+      print("see you later")
    else:
-      print("comando invalido solo se acepta y/n yes/no")
-      nuevo()
-calculadora()
+      print("invalid command only: y/n yes/no")
+      new()
+calculator()
     
