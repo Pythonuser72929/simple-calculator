@@ -4,7 +4,7 @@ def calculator() :
       print("only numbers = ")
       calculator()
    elif type(x) is not str:
-      operator = (input("+-×÷:"))
+      operator = (input("+-(×÷/*%:"))
       y = int(input(">>>  "))
       if type(y) is str:
         print("only numbers = ")
@@ -18,16 +18,16 @@ def calculator() :
           result = x - y
           print("=" , result)
           new()
-        elif operator == "÷":
+        elif operator == "÷" or operator == "%":
           result = x / y
           print("=" , result)
           new()
-        elif operator == "×":
+        elif operator == "×" or operator == "*":
           result = x * y
           print("=" , result)
           new()
         else:
-          print("invalid operator only: +-×÷")
+          print("invalid operator only: +-(×÷/*%)")
           calculator()
 def new(): 
    new = input("make another one y/n: ").lower()
