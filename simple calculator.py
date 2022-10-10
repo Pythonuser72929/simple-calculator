@@ -1,32 +1,24 @@
 def calculator() :
-   x = int(input(">>>  "))
-   if type(x) is str:
-      print("only numbers = ")
-      calculator()
-   elif type(x) is not str:
+      x = int(input(">>>  "))
       operator = (input("+-(×÷/*%):"))
       y = int(input(">>>  "))
-      if type(y) is str:
-        print("only numbers = ")
-        calculator()
-      elif type(y) is not str:
-        if operator == "+":
+      if operator == "+":
           result = x + y
           print("=" , result)
           new()
-        elif operator == "-":
+      elif operator == "-":
           result = x - y
           print("=" , result)
           new()
-        elif operator == "÷" or operator == "%":
+      elif operator == "÷" or operator == "%":
           result = x / y
           print("=" , result)
           new()
-        elif operator == "×" or operator == "*":
+      elif operator == "×" or operator == "*":
           result = x * y
           print("=" , result)
           new()
-        else:
+      else:
           print("invalid operator only: +-(×÷/*%)")
           calculator()
 def new(): 
